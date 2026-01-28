@@ -305,3 +305,6 @@ paket-files/
 
 # VS Code folder
 .vscode/
+
+# Databricks file
+*.pyi
