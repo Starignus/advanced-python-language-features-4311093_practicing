@@ -3,6 +3,13 @@
 
 
 def my_function(arg1, arg2=None):
+    """
+    My fucntions do something interesting.
+    
+    Paraneters:
+    arg1: Description
+    arg2: Description
+    """
     print(arg1, arg2)
 
 
