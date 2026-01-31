@@ -9,5 +9,19 @@ ctemps = [5, 10, 12, 14, 10, 23, 41, 30, 12, 24, 12, 18, 29]
 ftemps1 = [(t * 9/5) + 32 for t in ctemps]
 print(ftemps1)
 
-# TODO: build a set from an input source
-s_temp = "The quick brown fox jumped over the lazy dog"
+# Unique value using set comprehension
+ftemps = {(t * 9/5) + 32 for t in ctemps}
+print(ftemps)
+
+# TODO: Count he unique letters while converting them to uppercase and not taking accoint spaces
+# s_temp = "The quick brown fox jumped over the lazy dog"
+s_temp = "Test the case"
+unique_letters = {char.upper() for char in s_temp if not char.isspace()}
+print(unique_letters)
+print(len(unique_letters))
+unique_letters_aapended = "".join(unique_letters)
+print(unique_letters_aapended)
+# If we want to sort them to keep the order consistent, but it is not a set anymore
+unique_letters_sorted = sorted(unique_letters) 
+print(type(unique_letters_sorted))
+print("".join(unique_letters_sorted))
