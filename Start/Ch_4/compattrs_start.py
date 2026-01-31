@@ -35,8 +35,9 @@ class MyColor():
             super().__setattr__(attr, value)
 
     # TODO: use dir to list the available properties
+    # in priciple we need to retur the methods and attr
     def __dir__(self):
-        return ("rgbcolor", "hexcolor")
+        return ("rgbcolor", "hexcolor", "red", "green", "blue")
 
 
 # create an instance of myColor
