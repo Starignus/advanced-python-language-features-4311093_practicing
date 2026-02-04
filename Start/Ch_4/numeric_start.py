@@ -12,15 +12,16 @@ class Point():
 
     # TODO: implement addition
     def __add__(self, other):
-        pass
+        return Point(self.x + other.x, self.y + other.y)
 
     # TODO: implement subtraction
     def __sub__(self, other):
-        pass
-
+        return Point(self.x - other.x, self.y - other.y)
     # TODO: implement in-place addition
     def __iadd__(self, other):
-        pass
+        self.x += other.x
+        self.y += other.y
+        return self
 
 
 # Declare some points
@@ -29,7 +30,12 @@ p2 = Point(30, 30)
 print(p1, p2)
 
 # TODO: Add two points
+# default without modification in the code
+print(p1 + p2) # if commented out the __add__ method this will raise an error
 
 # TODO: subtract two points
+print(p2 - p1)
 
 # TODO: Perform in-place addition
+p1 += p2
+print(p1)
