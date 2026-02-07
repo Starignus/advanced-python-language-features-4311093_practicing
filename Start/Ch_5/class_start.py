@@ -32,3 +32,14 @@ shapes = [Circle(5), Square(4), Rectangle(4, 6),
           Square(7), Circle(9), Rectangle(2, 5)]
 
 # TODO: use pattern matching to process each shape
+for shape in shapes:
+    match shape:
+        case Circle():
+            print(f"Circle with area: {shape.getarea():.2f}")
+        case Square():
+            print(f"Square with area: {shape.getarea():.2f}")
+        case Rectangle():
+            print(f"Rectangle with area: {shape.getarea():.2f}")
+        case _:
+            print(f"Unknown shape {type(shape)}")
+            
